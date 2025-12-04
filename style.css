@@ -1,18 +1,23 @@
+/* ---------------- HEADER + NAVIGATION RESPONSIVE FIX ---------------- */
+
 .logo img {
     width: 124px;
 }
 
 nav {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     font-family: "Segoe UI";
     gap: 20px;
+    flex-wrap: wrap; /* Allows responsive wrapping */
+    padding: 0 20px;
 }
 
 .right {
     display: flex;
     gap: 40px;
+    flex-wrap: wrap; /* Prevents overflowing */
 }
 
 .right a {
@@ -27,12 +32,16 @@ header {
     background-color: rgba(0,0,0,0.3);
     backdrop-filter: blur(95px);
     padding: 20px 0;
+    width: 100%;
+    box-sizing: border-box;
     z-index: -1;
 }
 
+/* ---------------- HERO SECTION ---------------- */
+
 .hero {
     height: 400px;
-    background-image: url(Hero-section.jpg);
+    background-image: url(Hero-Section.jpg);
     background-size: cover;
     background-position: center;
     display: flex;
@@ -61,45 +70,9 @@ header {
     border-radius: 6px;
     font-weight: bold;
 }
-.products {
-    padding: 40px 20px;
-    text-align: center;
-}
 
-.products h2 {
-    font-size: 32px;
-    margin-bottom: 30px;
-}
+/* ---------------- PRODUCTS SECTION ---------------- */
 
-.product-container {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    flex-wrap: wrap;
-}
-
-.product-card {
-    width: 250px;
-    padding: 15px;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    text-align: center;
-}
-
-.product-card img {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-    border-radius: 8px;
-}
-
-.product-card h3 {
-    margin: 10px 0 5px;
-}
-
-.product-card p {
-    color: gray;
-}
 .products {
     padding: 40px 20px;
     text-align: center;
@@ -174,6 +147,8 @@ header {
     background-color: #e65c00;
 }
 
+/* ---------------- CALL BUTTON ---------------- */
+
 .call-btn {
     display: inline-block;
     padding: 10px 20px;
@@ -189,6 +164,8 @@ header {
 .call-btn:hover {
     background-color: #e65c00;
 }
+
+/* ---------------- ABOUT US SECTION ---------------- */
 
 .about-us {
     padding: 40px 20px;
@@ -228,6 +205,8 @@ header {
     height: auto;
     border-radius: 10px;
 }
+
+/* ---------------- FOOTER ---------------- */
 
 .footer {
     background: #1a1a1a;
@@ -272,11 +251,52 @@ header {
     font-size: 14px;
 }
 
+/* ---------------- GLOBAL ---------------- */
+
 html {
     scroll-behavior: smooth;
 }
 
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+}
+
+h2, h3, h4 {
+    color: #ff6600;
+}
+
+h3, h4 {
+    font-weight: bold;
+}
+
+a {
+    color: #ff6600;
+}
+
+/* ---------------- RESPONSIVE HEADER FIX ---------------- */
+
 @media (max-width: 768px) {
+
+    nav {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+
+    .right {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .logo img {
+        width: 100px;
+    }
+
+    header {
+        padding: 15px 0;
+    }
+
     .footer-container {
         flex-direction: column;
         text-align: center;
@@ -294,31 +314,3 @@ html {
         font-size: 18px;
     }
 }
-
-.product-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.btn:hover {
-    background-color: #e65c00;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-body {
-    font-family: 'Poppins', sans-serif;
-    color: #333;
-}
-
-h2, h3, h4 {
-    color: #ff6600; /* Main orange color for headings */
-}
-
-h3, h4 {
-    font-weight: bold;
-}
-
-a {
-    color: #ff6600; /* Links in footer and navbar */
-}
-
