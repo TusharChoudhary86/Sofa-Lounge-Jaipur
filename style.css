@@ -31,8 +31,8 @@ header {
 }
 
 .hero {
-    height: 400px; /* adjust if you want */
-    background-image: url("Hero-section.jpg");
+    height: 400px;
+    background-image: url(Hero-section.jpg);
     background-size: cover;
     background-position: center;
     display: flex;
@@ -321,3 +321,4 @@ h3, h4 {
 a {
     color: #ff6600; /* Links in footer and navbar */
 }
+
